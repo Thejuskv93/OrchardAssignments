@@ -1,0 +1,7 @@
+1. update marks set mark=(mark+5) where module_code=(select module_code from modules where module_name="Operating Systems");
+
+2.  update students set surname=concat("mind",ifnull(surname,''));
+
+3.  select * from students where student_no in (select student_no from marks where mark>60 and module_code=(select module_code from modules where module_name="C Programming"));
+
+4.  select * from students where student_no in (select student_no from marks where mark>80 and module_code=(select module_code from modules where module_name="Databases"));
