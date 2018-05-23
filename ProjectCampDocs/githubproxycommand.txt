@@ -1,0 +1,1 @@
+git config --global http.proxy http://m1044323:Godislove@93@172.17.2.218:8085

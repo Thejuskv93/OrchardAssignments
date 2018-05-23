@@ -1,0 +1,2 @@
+npm i node-sass --save
+ng new project-name --style=scss

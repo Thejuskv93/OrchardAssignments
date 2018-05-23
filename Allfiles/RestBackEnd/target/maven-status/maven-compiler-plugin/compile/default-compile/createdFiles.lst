@@ -1,0 +1,9 @@
+com\mindtree\configuration\AppInitializer.class
+com\mindtree\serviceImpl\RestServiceImpl.class
+com\mindtree\controller\RestController.class
+com\mindtree\dao\RestDao.class
+com\mindtree\configuration\AppConfig.class
+com\mindtree\configuration\HibernateConfiguration.class
+com\mindtree\entity\User.class
+com\mindtree\service\RestService.class
+com\mindtree\daoImpl\RestDaoImpl.class

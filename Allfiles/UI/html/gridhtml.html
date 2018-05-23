@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#memory_board{
+	background:blue;
+	border:#999 1px solid;
+	width:400px;
+	height:400px;
+	padding:24px;
+	margin:0px auto;
+
+}
+div#memory_board > div{
+	border:#000 1px solid;
+	width:71px;
+	height:71px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+}
+div#memory_board>div:hover
+{
+    background:orange;
+	border:#000 1px solid;
+	width:71px;
+	height:71px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+}
+</style>
+<script>
+var numberarray = [1,1,2,2,3,3,4,4,5];
+var Dynarray = [];
+var DynArrayId = [];
+var grids_flipped = 0;
+
+Array.prototype.grid_shuffle = function()
+{
+    var i = this.length, j, temp;
+    while(--i > 0){
+        j = Math.floor(Math.random() * (i+1));
+        temp = this[j];
+        this[j] = this[i];
+        this[i] = temp;
+    }
+}
+function newBoard(){
+	grids_flipped = 0;
+	var output = '';
+    numberarray.grid_shuffle();
+	for(var i = 0; i < numberarray.length; i++){
+		output += '<div id="grid_'+i+'" onclick="FlipGrid(this,\''+numberarray[i]+'\')"></div>';
+	}
+	document.getElementById('memory_board').innerHTML = output;
+}
+function FlipGrid(grid,val){
+	if(grid.innerHTML == "" && Dynarray.length < 2){
+		grid.style.background = 'rgb(231, 95, 16)';
+		grid.innerHTML = val;
+		if(Dynarray.length == 0){
+			Dynarray.push(val);
+			DynArrayId.push(grid.id);
+		} else if(Dynarray.length == 1){
+			Dynarray.push(val);
+			DynArrayId.push(grid.id);
+			if(Dynarray[0] == Dynarray[1]){
+				grids_flipped += 2;
+				// Clear both arrays
+				Dynarray = [];
+            	DynArrayId = [];
+				// Check to see if the whole board is cleared
+				if(grids_flipped == numberarray.length){
+					document.getElementById('memory_board').innerHTML = "";
+					newBoard();
+				}
+			} else {
+				function flip2Back(){
+				    // Flip the 2 tiles back over
+				    var tile_1 = document.getElementById(DynArrayId[0]);
+				    var tile_2 = document.getElementById(DynArrayId[1]);
+				    tile_1.style.background = '';
+            	    tile_1.innerHTML = "";
+				    tile_2.style.background = '';
+            	    tile_2.innerHTML = "";
+				    // Clear both arrays
+				    Dynarray = [];
+            	    DynArrayId = [];
+				}
+				setTimeout(flip2Back, 700);
+			}
+		}
+	}
+}
+</script>
+</head>
+<body>
+<div id="memory_board"></div>
+<script>newBoard();</script>
+</body>
+</html>

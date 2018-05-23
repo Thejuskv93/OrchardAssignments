@@ -1,0 +1,6 @@
+com\mindtree\controllers\UserController.class
+com\mindtree\service\UserService.class
+com\mindtree\dao\UserDao.class
+com\mindtree\service\UserServiceImpl.class
+com\mindtree\dao\UserDaoImpl.class
+com\mindtree\entity\User.class

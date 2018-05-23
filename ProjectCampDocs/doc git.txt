@@ -1,0 +1,27 @@
+ssh-keygen -t rsa -C "ajay.j2@mindtree.com" -b 4096
+
+git config --global user.name "Ajay J"
+git config --global user.email "m1044588@mindtree.com"
+
+Create a new repository
+git clone git@glcgitlab.southindia.cloudapp.azure.com:playground/java-feb-2018/debasmita/PlayGround/Ajay/test.git
+cd test
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+cd existing_folder
+git init
+git remote add origin git@glcgitlab.southindia.cloudapp.azure.com:playground/java-feb-2018/debasmita/PlayGround/Ajay/test.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@glcgitlab.southindia.cloudapp.azure.com:playground/java-feb-2018/debasmita/PlayGround/Ajay/test.git
+git push -u origin --all
+git push -u origin --tags

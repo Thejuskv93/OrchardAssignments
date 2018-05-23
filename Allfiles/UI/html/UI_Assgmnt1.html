@@ -1,0 +1,87 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="../css/style.css"> 
+    </head>
+    <!-- <meta name="viewport" content="width=browser-width,initial-scale=1.0"> -->
+    <body>
+        <div class="wrapper">
+        <form name="f1" onsubmit="return validateData()"> 
+            <center>
+            <table width=50% id="firsttbl"> 
+                <tr>
+                    <td>Title:</td>
+                    <td>
+                        <select>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname" id="fname" onblur="checkEmpty()"></td><td><div id="warning"></div></td>  
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname"></td>      </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city"></td>
+            </tr>
+                <tr>
+                    <td>State:</td>
+                    <td><input type="text" name="state"></td>
+                </tr>
+                <tr>
+                    <td>Postal Code:</td>
+                    <td><input type="text" name="pcode"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td><input type="text" name="country"></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td><input type="text" name="fax"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Payment by:</td>
+                    <td><input type="radio" name="payment" value="paypal">PayPal</input><br>
+                    <input type="radio" name="payment" value="Manual:Pay on Arrival">Manual:Pay on Arrival</input><br>
+                    <input type="radio" name="payment" value="Credit Card">Credit Card</input></td>
+                </tr>
+                <tr>
+                    <td>Any additional requests:</td>
+                    <td><textarea name="addiReq" cols="50" rows="6"></textarea></td>
+                </tr>
+                <tr>
+                    <span >
+                    <td></td>
+                    <td><input type="checkbox" name="tc">
+                       I agree with the  <a href="tandc.html">Terms & Conditions</a><br><br>
+                    </span>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Confirm & Checkout">
+                    <input type="reset" value="reset">
+                </tr>
+            </table>
+        </center>
+        </form>
+    </div>
+    </body>
+</html>
+<script src="../js/Ui1.js"></script>

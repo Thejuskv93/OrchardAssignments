@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <meta charset="utf-8">
+        <style>
+            #tbl
+            {
+                font-size: 20px;
+            }
+            table{
+                margin-left: 100px;
+                width: 100%;
+            }
+            td{
+                padding:15px;
+            }
+            th{
+                background-color: #434b94;
+                padding: 20px;
+            }
+            
+            tr:nth-child(odd){background-color: #838bd1
+            }
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+        <body>
+            <!-- <center> -->
+            <div class="container">
+            <header>
+                   <h1>Electronic Shop</h1> 
+            </header>
+       
+            <nav>
+                    <div id="navi">
+                <ul>
+                    <li><a href="#">Add Product</a></li>
+                    <li><a href="#">View Products</a></li>
+                </ul>
+            </div>
+            </nav>
+        
+            <div id="tbl">
+                <h2>View Products</h2>
+                <br>
+                <br>
+                Choose a product Category
+                <select>
+                    <option value="">--select--</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="camera">Camera</option>
+                    <option value="laptop">Laptop</option>
+                </select>
+                <hr>
+                <br><br>
+                <h2>List of Products</h2>
+                
+                <table border=1 id="newtbl">
+                    <tr>
+                        <th>Product Id</th>
+                        <th colspan="2px">Product Name</th>
+                        <th colspan="1px">Price</th>
+                    </tr>
+                    <tr>
+                        <td>p1001</td>
+                        <td  colspan="2px">Micromax Superfine Canvas A110 white</td>
+                        <td>11450</td>
+                    </tr>
+                    <tr>
+                            <td>p1002</td>
+                            <td  colspan="2px">3M mobile Privacy Filter for Blackberry Curve</td>
+                            <td>430</td>
+                    </tr>
+                    <tr>
+                            <td>p1003</td>
+                            <td  colspan="2px">Sony Xperia</td>
+                            <td>4000</td>
+                    </tr>
+                    <tr>
+                            <td>p1004</td>
+                            <td  colspan="2px">Micromx Android Mobile Phone</td>
+                            <td>14000</td>
+                    </tr>
+                </table>
+            </div>
+            <footer>Copyright@mindtree</footer>
+        </div>
+    <!-- </center> -->
+        </body>
+    
+    
+</html>

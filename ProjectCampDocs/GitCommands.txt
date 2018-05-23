@@ -1,0 +1,54 @@
+ssh-keygen -t rsa -C "Thejus.Kallyadanveettil@mindtree.com" -b 4096
+
+
+
+Git global setup
+git config --global user.name "Thejus Kallyadanveettil"
+git config --global user.email "m1044323@mindtree.com"
+
+Create a new repository
+git clone git@glcgitlab.southindia.cloudapp.azure.com:M1044323/Test.git
+cd Test
+touch README.md
+git add README.md
+git commit -m "add READM
+git push -u origin master
+
+Existing folder
+cd existing_folder
+git init
+git remote add origin git@glcgitlab.southindia.cloudapp.azure.com:M1044323/Test.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+
+
+git checkout -b dev
+git branch
+Existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@glcgitlab.southindia.cloudapp.azure.com:M1044323/Test.git
+git push -u origin --all
+git push -u origin --tags
+
+
+
+git commit -am "message"// used to ignore the files described in add command and adds all the files
+git reset --hard //can be used to revert back to previous commit
+git log -2 //displays the details of the commit done
+ git rm -f demo.txt // to remove the file
+ git mv first.txt demo/second.txt //rename the file
+git revert id //revert back to the id specified
+
+
+
+
+
+
+
+For creating archetype on our own :
+
+type mvn archetype:generate
+then give group id , archetype,...
